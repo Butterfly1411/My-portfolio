@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 30px auto;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+section{
+    margin-top: 200px;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: "Roboto Mono", monospace;
+}
+
+span {
+    color: #5ed5ea;
+    font-weight: 600;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.social li {
+    position: relative;
+    flex-basis: 4.5rem;
+}
+
+.social li::after {
+    position: absolute;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    color: #fff;
+    /* background: #070707; */
+    background: var(--bg, #5ed5ea);
+    border-radius: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    /* transition: all 0.3s ease-in-out; */
+    transition: inset 0.4s cubic-bezier(0.47, 2, 0.41, 1.5),
+        visibility 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.social li:has(a:hover, a:focus-visible)::after {
+    opacity: 1;
+    visibility: visible;
+    inset-block-start: -60%;
+}
+
+.social a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    font-size: 1.75rem;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 100%;
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.social a>i {
+    position: relative;
+    z-index: 1;
+}
+
+.social a::after {
+    position: absolute;
+    content: "";
+    inset: 100% 0 0;
+    /* background: #070707; */
+    background: var(--bg, #5ed5ea);
+    pointer-events: none;
+    transition: inset 0.3s ease-in-out;
+}
+
+.social a:hover,
+.social a:focus-visible {
+    color: #070707;
+}
+
+.social a:hover::after,
+.social a:focus-visible::after {
+    inset-block-start: 0;
+}
+.line:hover span {
+    color: black  !important;  
+}
+.line-black{
+    width: 2px;
+    height: 120px;
+    border: 2px;
+    border-radius: 2px;
+    background-color: grey;
+
+}
