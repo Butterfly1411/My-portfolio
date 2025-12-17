@@ -37,7 +37,7 @@ const WhatIcan = () => {
             <div>
                 <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20'>
                     {data_li.map(data => (
-                        <li className='w-[350px] h-[300px] p-5 pt-9 border-2 border-[#5ed5ea] hover:bg-[#5ed5ea] hover:text-black  rounded-[10px]' key={data.id}>
+                        <li className='lg:w-[350px] h-[300px] w-[320px]  p-5 pt-9 border-2 border-[#5ed5ea] hover:bg-[#5ed5ea] hover:text-black  rounded-[10px]' key={data.id}>
                             <div className='flex justify-between items-center'>
                                 <i className={`${data.icon} text-3xl`}></i>
                                 <p className='text-6xl text-gray-700'>{data.number}</p>

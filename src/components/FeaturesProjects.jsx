@@ -35,7 +35,7 @@ const FeaturesProjects = () => {
         <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10  gap-6 mt-20'>
           {project_li.map(project => (
             <li className='' key={project.id}>
-              <div className='lg:w-[380px] lg:h-[310px] w-[340px] h-[290px] p-6 border-2   border-[#5ed5ea]  rounded-xl bg-[#0ff]/20 backdrop-blur-xl shadow-[0_0_30px_rgba(0,255,255,0.4)]'>
+              <div className='lg:w-[380px] lg:h-[310px] w-[320px] h-[290px] p-6 border-2   border-[#5ed5ea]  rounded-xl bg-[#0ff]/20 backdrop-blur-xl shadow-[0_0_30px_rgba(0,255,255,0.4)]'>
                 <img className='w-full h-full rounded-xl object-cover transition-transform duration-500 hover:scale-110' src={project.img} alt="" />
               </div>
               {/* Text */}

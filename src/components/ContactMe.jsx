@@ -27,7 +27,7 @@ const ContactMe = () => {
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
                   <i className="bi bi-envelope-open mt-3  text-black text-2xl"></i>
                 </div>
-                <a href="">sabohattoshpolatova72@gmail.com</a>
+                <a className='md:text-[16px]' href="">sabohattoshpolatova72@gmail.com</a>
               </li>
               <li className='flex items-center gap-4'>
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
