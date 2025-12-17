@@ -11,7 +11,7 @@ const ContactMe = () => {
       </div>
       <div className='grid grid-cols-1  lg:grid-cols-2 mt-4 lg:items-center lg:gap-8'>
         <div className='grid gap-10 lg:mb-30'>
-          <div className='text-xl lg:text-3xl'>
+          <div className='text-[18px] lg:text-3xl'>
             <p>Have an awesome project idea? <br />
               <span>Let's Discuss</span>.</p>
           </div>
@@ -27,7 +27,7 @@ const ContactMe = () => {
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
                   <i className="bi bi-envelope-open mt-3  text-black text-2xl"></i>
                 </div>
-                <a className='md:text-[16px]' href="">sabohattoshpolatova72@gmail.com</a>
+                <a className='md:text-[10px]' href="">sabohattoshpolatova72@gmail.com</a>
               </li>
               <li className='flex items-center gap-4'>
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
