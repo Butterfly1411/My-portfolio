@@ -11,14 +11,14 @@ const AboutMe = () => {
       <div className='grid grid-cols-1  lg:flex lg:justify-between items-center gap-30'>
         {/* Image */}
         <div className='mt-10'>
-          <div className='lg:w-110 lg:h-110 w-90 h-90 border-2 border-[#5ed5ea] rounded-full relative'>
+          <div className='lg:w-110 lg:h-110 w-80 h-80 border-2 border-[#5ed5ea] rounded-full relative'>
             <div>
               <img className='w-13 h-13 rounded-full absolute lg:left-6 lg:top-17 left-3 top-10' src="/html.png" alt="" />
-              <img className='w-13 h-13 rounded-full absolute lg:left-81 lg:top-5 left-71 top-3' src="/js.jpg" alt="" />
-              <img className='w-13 h-13 rounded-full absolute lg:left-81 lg:top-90 left-71 top-72' src="/css.png" alt="" />
+              <img className='w-13 h-13 rounded-full absolute lg:left-81 lg:top-5 left-61 top-3' src="/js.jpg" alt="" />
+              <img className='w-13 h-13 rounded-full absolute lg:left-81 lg:top-90 left-61 top-65' src="/css.png" alt="" />
               <img className='w-13 h-13 rounded-full absolute lg:left-21 lg:top-92 left-12 top-72' src="/react2.webp" alt="" />
             </div>
-            <img className='lg:w-90 lg:h-90 w-80 h-80 rounded-full lg:ml-10 lg:mt-9 ml-5 mt-5 ' src='/Sabohat3.png' alt="" />
+            <img className='lg:w-90 lg:h-90 w-70 h-70 rounded-full lg:ml-10 lg:mt-9 ml-5 mt-5 ' src='/Sabohat3.png' alt="" />
           </div>
 
         </div>

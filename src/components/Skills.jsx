@@ -15,9 +15,9 @@ const Skills = () => {
             <div>
                 <ul className='grid gap-6'>
                     <li className='flex lg:gap-8 gap-3 items-center'>
-                        <div className='lg:w-[100px] lg:h-[100px] w-[90px] h-[90px] rounded-full border-2 shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center mt-8 text-[18px] lg:text-xl'>HTML5</p></div>
+                        <div className='lg:w-[100px] lg:h-[100px] w-[75px] h-[75px] rounded-full border-2 shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center mt-6 text-[18px] lg:text-xl'>HTML5</p></div>
                         <div className='lg:w-[200px] lg:h-20 w-40 h-[60px] border-2 rounded-2xl shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center lg:mt-7 mt-4 text-[18px] lg:text-xl'>JAVASCRIPT</p></div>
-                        <div className='lg:w-[100px] lg:h-[100px] w-[90px] h-[90px] rounded-full border-2 shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center mt-8 text-[18px] lg:text-xl'>CSS3</p></div>
+                        <div className='lg:w-[100px] lg:h-[100px] w-[75px] h-[75px] rounded-full border-2 shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center mt-6 text-[18px] lg:text-xl'>CSS3</p></div>
                     </li>
                     <li className='flex gap-8 items-center'>
                         <div className='lg:w-[170px] lg:h-20 w-[150px] h-[60px] border-2 rounded-[90px] shadow-2xl border-[#5ed5ea] bg-gray-950'><p className='text-center mt-4 lg:mt-5 text-[18px] lg:text-xl'>React</p></div>

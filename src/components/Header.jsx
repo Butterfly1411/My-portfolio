@@ -105,15 +105,15 @@ const Header = () => {
                 </nav>
 
                 {/* TEXT */}
-                <div className="container text-center ">
-                    <h2 className="text-[30px] max-w-4xl mx-auto">
+                <div className="container">
+                    <h2 className="text-[30px]  mx-auto text-center">
                         Hi, I am <span className=''>Sabohat</span>
                         <p className='text-[18px] mt-3'>A seasoned <span>Frontend Developer</span> transforming ideas into stunning <br />
                         digital experiences. Let's create something amazing!</p>
                     </h2>
 
                     {/* Icons */}
-                    <ul className="flex justify-center gap-[30px] mt-10 social">
+                    <ul className=" gap-[30px] mt-10 social">
                         {icon_items.map(icon => (
                             <li className="w-[50px] h-[50px]" key={icon.id}>
                                 <a href={icon.link} target="_blank">

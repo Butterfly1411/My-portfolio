@@ -45,6 +45,12 @@ span {
     gap: 1rem;
     list-style: none;
 }
+@media (max-width: 800px) {
+    .social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 
 .social li {
     position: relative;
