@@ -32,18 +32,17 @@ const FeaturesProjects = () => {
         <h1 className='text-2xl'>Featured <span>projects</span>.</h1>
       </div>
       <div>
-        <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10  gap-6 mt-20'>
+        <ul className='grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-10  gap-6 mt-20'>
           {project_li.map(project => (
-            <li className='' key={project.id}>
-              <div className='lg:w-[380px] lg:h-[310px] w-[320px] h-[290px] p-6 border-2   border-[#5ed5ea]  rounded-xl bg-[#0ff]/20 backdrop-blur-xl shadow-[0_0_30px_rgba(0,255,255,0.4)]'>
-                <img className='w-full h-full rounded-xl object-cover transition-transform duration-500 hover:scale-110' src={project.img} alt="" />
+            <li className='w-[320px] lg:w-[380px] flex flex-col' key={project.id}>
+              <div className='lg:w-[380px] lg:h-[310px] w-[320px] h-[290px] p-6 border-2   border-[#5ed5ea]  rounded-xl bg-[#0ff]/20 backdrop-blur-xl shadow-[0_0_30px_rgba(0,255,255,0.4)] overflow-hidden '>
+                <img className='w-full h-full rounded-xl object-cover transition-transform duration-500 ease-out hover:scale-110' src={project.img} alt="" />
               </div>
               {/* Text */}
               <div className='mt-5'>
                 <h3>{project.title}</h3>
                 <p>{project.passage}</p>
               </div>
-
             </li>
           ))}
         </ul>

@@ -8,7 +8,7 @@ const AboutMe = () => {
         <p className='text-[20px] text-gray-600 uppercase'>My Bio</p>
         <h1 className='text-2xl'>About <span>me</span>.</h1>
       </div>
-      <div className='grid grid-cols-1  lg:flex lg:justify-between items-center gap-30'>
+      <div className='grid grid-cols-1 place-items-center  lg:flex lg:justify-between items-center gap-30'>
         {/* Image */}
         <div className='mt-10'>
           <div className='lg:w-110 lg:h-110 w-80 h-80 border-2 border-[#5ed5ea] rounded-full relative'>
