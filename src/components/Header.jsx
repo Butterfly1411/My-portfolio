@@ -50,6 +50,8 @@ const Header = () => {
             <div
                 className="absolute inset-0 bg-cover bg-center "
                 style={{ backgroundImage: "url(/code-vibe.jpg)" }}
+                role="img"
+                aria-label="Code background"
             ></div>
 
             {/* Gradient + light blur only on left side */}
@@ -57,9 +59,9 @@ const Header = () => {
 
             {/* NAV + CONTENT */}
             <div className="relative z-10 grid  gap-30">
-                <nav className="container">
+                <nav className="container" aria-label="Main navigation">
                     <div className="flex items-center justify-between mt-6">
-                        <h2 className="text-2xl font-medium">Dev<span>/</span></h2>
+                        <h1 className="text-2xl font-medium">Dev<span>/</span></h1>
 
                         {/* Desktop nav */}
                         <div className="hidden md:flex">
@@ -79,23 +81,26 @@ const Header = () => {
                         <button
                             className="md:hidden text-3xl"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                            aria-expanded={isMenuOpen}
                         >
                             {isMenuOpen
-                                ? <i className="bi bi-x-lg"></i>
-                                : <i className="bi bi-list"></i>}
+                                ? <i className="bi bi-x-lg" aria-hidden="true"></i>
+                                : <i className="bi bi-list" aria-hidden="true"></i>}
                         </button>
                     </div>
 
                     {/* Mobile menu */}
                     {isMenuOpen && (
-                        <div className="md:hidden grid animate-[slideDown_0.4s_ease] items-center">
+                        <div className="md:hidden grid animate-[slideDown_0.4s_ease] items-center" role="menu">
                             <ul className="grid justify-center gap-10">
                                 {items_li.map(item => (
                                     <li
                                         key={item.id}
                                         className="text-[18px] font-medium text-center hover:border-[#97bfcd]"
+                                        role="menuitem"
                                     >
-                                        <a href={item.id}>{item.title}</a>
+                                        <a href={item.id} onClick={() => setIsMenuOpen(false)}>{item.title}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -106,11 +111,11 @@ const Header = () => {
 
                 {/* TEXT */}
                 <div className="container">
-                    <h2 className="text-[30px]  mx-auto text-center">
-                        Hi, I am <span className=''>Sabohat</span>
+                    <div className="text-[30px]  mx-auto text-center">
+                        <h2 className="text-[30px]">Hi, I am <span className=''>Sabohat</span></h2>
                         <p className='text-[18px] mt-3'>A seasoned <span>Frontend Developer</span> transforming ideas into stunning <br />
                         digital experiences. Let's create something amazing!</p>
-                    </h2>
+                    </div>
 
                     {/* Icons */}
                     <ul className=" gap-[30px] mt-10 social">

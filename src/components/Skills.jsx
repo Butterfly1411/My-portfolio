@@ -2,12 +2,12 @@ import React from 'react'
 
 const Skills = () => {
     return (
-        <div className='container  grid grid-cols-1 lg:grid-cols-2 gap-20'>
+        <section className='container grid grid-cols-1 lg:grid-cols-2 gap-20' aria-labelledby="skills-heading">
             {/* Text */}
             <div> 
                 <div className='mb-10'>
                     <p className='text-[20px] text-gray-600 uppercase'>Skills</p>
-                    <h1 className='text-2xl'>Technical <span>skills</span>.</h1>
+                    <h2 id="skills-heading" className='text-2xl'>Technical <span>skills</span>.</h2>
                 </div>
                 <p className='text-gray-700 mt-2 text-[20px]'>Skilled in JavaScript, React, and Tailwind CSS for building modern, responsive web applications. Experienced in using Git and GitHub for version control and collaboration. Familiar with API integration, responsive design principles, and creating clean, user-friendly interfaces. 
                     Eager to learn new technologies and improve coding practices continuously.</p>
@@ -29,7 +29,7 @@ const Skills = () => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 

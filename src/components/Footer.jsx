@@ -48,32 +48,41 @@ const Footer = () => {
         </div>
   
         {/* MIDDLE LINKS */}
-        <div>
+        <nav aria-label="Footer navigation">
           <ul className="grid gap-3 text-lg">
             <li><a className="hover:text-blue-400 duration-200" href="#home">Home</a></li>
             <li><a className="hover:text-blue-400 duration-200" href="#featuresproject">My projects</a></li>
             <li><a className="hover:text-blue-400 duration-200" href="#aboutme">About me</a></li>
             <li><a className="hover:text-blue-400 duration-200" href="#contactme">Contact me</a></li>
           </ul>
-        </div>
+        </nav>
   
         {/* RIGHT SOCIAL ICONS */}
         <div>
           <p className="mb-3 text-lg font-medium">Social Media</p>
-          <div className="flex justify-center lg:justify-start gap-4">
-            {icon_items.map(item => (
-              <a
-                key={item.id}
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="w-10 h-10 flex items-center justify-center 
-                           rounded-full bg-blue-100 hover:bg-blue-200 
-                           duration-200"
-              >
-                <i className={`${item.icon} text-xl text-gray-700`}></i>
-              </a>
-            ))}
+          <div className="flex justify-center lg:justify-start gap-4" role="list">
+            {icon_items.map(item => {
+              const socialNames = {
+                1: 'GitHub',
+                2: 'Email',
+                3: 'LinkedIn',
+                4: 'Instagram'
+              }
+              return (
+                <a
+                  key={item.id}
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 flex items-center justify-center 
+                             rounded-full bg-blue-100 hover:bg-blue-200 
+                             duration-200"
+                  aria-label={`Visit ${socialNames[item.id]} profile`}
+                >
+                  <i className={`${item.icon} text-xl text-gray-700`} aria-hidden="true"></i>
+                </a>
+              )
+            })}
           </div>
         </div>
   

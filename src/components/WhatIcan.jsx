@@ -25,12 +25,12 @@ const WhatIcan = () => {
         },
     ]
     return (
-        <div className='container relative  mt-10'>
+        <section className='container relative mt-10' aria-labelledby="services-heading">
         
             {/* Text */}
             <div className='text-center'>
                 <p className='text-[20px] text-gray-600 uppercase'>Service</p>
-                <h1 className='text-2xl'>What <span>I do</span>.</h1>
+                <h2 id="services-heading" className='text-2xl'>What <span>I do</span>.</h2>
             </div>
 
             <div>
@@ -51,7 +51,7 @@ const WhatIcan = () => {
                 </ul>
             </div>
 
-        </div>
+        </section>
     )
 }
 

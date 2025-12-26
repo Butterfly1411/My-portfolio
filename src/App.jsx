@@ -11,12 +11,12 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
-        <section id="whatIcan"><WhatIcan /></section>
-        <section id="featuresproject"><FeaturesProjects /></section>
-        <section id="aboutme"><AboutMe /></section>
-        <section id="skills"><Skills /></section>
-        <section id="contactme"><ContactMe /></section>
+      <main role="main">
+        <section id="whatIcan" aria-label="Services section"><WhatIcan /></section>
+        <section id="featuresproject" aria-label="Featured projects section"><FeaturesProjects /></section>
+        <section id="aboutme" aria-label="About me section"><AboutMe /></section>
+        <section id="skills" aria-label="Skills section"><Skills /></section>
+        <section id="contactme" aria-label="Contact me section"><ContactMe /></section>
       </main>
       <Footer />
     </>
