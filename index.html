@@ -41,8 +41,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Font loading with display=swap for better performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <!-- Font loading with display=swap and media="print" to prevent render blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" /></noscript>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="/code-vibe.jpg" as="image" fetchpriority="high" />
@@ -60,6 +61,13 @@
     
     <!-- Best Practices: Prevent render-blocking -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Security Headers -->
+    <!-- Note: CSP should be set via server headers in production for better security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
   </head>
 
   <body>

@@ -140,6 +140,32 @@ span {
     top: 0;
 }
 
+/* Screen reader only class for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Improve contrast for better accessibility */
+.text-gray-400 {
+    color: #9ca3af; /* Better contrast than default gray-400 */
+}
+
+.text-gray-600 {
+    color: #6b7280; /* Better contrast */
+}
+
+.text-gray-700 {
+    color: #4b5563; /* Better contrast */
+}
+
 .social a:hover::after,
 .social a:focus-visible::after {
     inset-block-start: 0;

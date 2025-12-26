@@ -51,6 +51,8 @@ const AboutMe = () => {
               src='/Sabohat3.png' 
               alt="Sabohat Toshpolatova - Frontend Developer" 
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
               width="360"
               height="360"
             />

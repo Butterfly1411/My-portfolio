@@ -50,17 +50,17 @@ const Footer = () => {
         {/* MIDDLE LINKS */}
         <nav aria-label="Footer navigation">
           <ul className="grid gap-3 text-lg">
-            <li><a className="hover:text-blue-400 duration-200" href="#home">Home</a></li>
-            <li><a className="hover:text-blue-400 duration-200" href="#featuresproject">My projects</a></li>
-            <li><a className="hover:text-blue-400 duration-200" href="#aboutme">About me</a></li>
-            <li><a className="hover:text-blue-400 duration-200" href="#contactme">Contact me</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#home" aria-label="Navigate to home section">Home</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#featuresproject" aria-label="Navigate to projects section">My projects</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#aboutme" aria-label="Navigate to about me section">About me</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#contactme" aria-label="Navigate to contact section">Contact me</a></li>
           </ul>
         </nav>
   
         {/* RIGHT SOCIAL ICONS */}
         <div>
           <p className="mb-3 text-lg font-medium">Social Media</p>
-          <div className="flex justify-center lg:justify-start gap-4" role="list">
+          <div className="flex justify-center lg:justify-start gap-4">
             {icon_items.map(item => {
               const socialNames = {
                 1: 'GitHub',

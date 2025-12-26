@@ -55,6 +55,7 @@ const Header = () => {
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
+                decoding="async"
                 aria-hidden="true"
               />
             </picture>
@@ -70,14 +71,13 @@ const Header = () => {
 
                         {/* Desktop nav */}
                         <nav className="hidden md:flex" aria-label="Desktop navigation">
-                            <ul className="flex justify-between gap-[60px] items-center" role="list">
+                            <ul className="flex justify-between gap-[60px] items-center">
                                 {items_li.map(item => (
                                     <li
                                         key={item.id}
                                         className="text-[20px] md:text-[16px] font-medium border-b-2 border-transparent duration-300 hover:border-[#97bfcd] pb-1"
-                                        role="listitem"
                                     >
-                                        <a href={item.id} className="focus:outline-none focus:ring-2 focus:ring-[#5ed5ea] focus:ring-offset-2 rounded">{item.title}</a>
+                                        <a href={item.id} className="focus:outline-none focus:ring-2 focus:ring-[#5ed5ea] focus:ring-offset-2 rounded" aria-label={`Navigate to ${item.title} section`}>{item.title}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -98,15 +98,14 @@ const Header = () => {
 
                     {/* Mobile menu */}
                     {isMenuOpen && (
-                        <div className="md:hidden grid animate-[slideDown_0.4s_ease] items-center" role="menu">
+                        <div className="md:hidden grid animate-[slideDown_0.4s_ease] items-center">
                             <ul className="grid justify-center gap-10">
                                 {items_li.map(item => (
                                     <li
                                         key={item.id}
                                         className="text-[18px] font-medium text-center hover:border-[#97bfcd]"
-                                        role="menuitem"
                                     >
-                                        <a href={item.id} onClick={() => setIsMenuOpen(false)}>{item.title}</a>
+                                        <a href={item.id} onClick={() => setIsMenuOpen(false)} aria-label={`Navigate to ${item.title} section`}>{item.title}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -125,13 +124,27 @@ const Header = () => {
 
                     {/* Icons */}
                     <ul className=" gap-[30px] mt-10 social">
-                        {icon_items.map(icon => (
-                            <li className="w-[50px] h-[50px]" key={icon.id}>
-                                <a href={icon.link} target="_blank" rel="noreferrer">
-                                    <i className={icon.icon + " text-3xl"}></i>
-                                </a>
-                            </li>
-                        ))}
+                        {icon_items.map(icon => {
+                            const socialNames = {
+                                1: 'GitHub',
+                                2: 'Email',
+                                3: 'LinkedIn',
+                                4: 'Instagram'
+                            }
+                            return (
+                                <li className="w-[50px] h-[50px]" key={icon.id}>
+                                    <a 
+                                        href={icon.link} 
+                                        target="_blank" 
+                                        rel="noreferrer"
+                                        aria-label={`Visit ${socialNames[icon.id]} profile`}
+                                    >
+                                        <i className={icon.icon + " text-3xl"} aria-hidden="true"></i>
+                                        <span className="sr-only">{socialNames[icon.id]}</span>
+                                    </a>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
 
