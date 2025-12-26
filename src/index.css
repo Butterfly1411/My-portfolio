@@ -1,7 +1,6 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* Performance: font-display swap is already included in Google Fonts URL */
+/* Font loading optimization - moved to HTML for better performance */
 
 
 .container {
@@ -117,6 +116,28 @@ span {
 .social a:hover,
 .social a:focus-visible {
     color: #070707;
+}
+
+/* Accessibility: Focus indicators */
+*:focus-visible {
+    outline: 2px solid #5ed5ea;
+    outline-offset: 2px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #5ed5ea;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 .social a:hover::after,

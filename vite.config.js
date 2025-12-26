@@ -6,6 +6,13 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
   build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
@@ -13,5 +20,7 @@ export default defineConfig({
         },
       },
     },
+    cssCodeSplit: true,
+    sourcemap: false,
   },
 })

@@ -10,8 +10,12 @@ import Skills from './components/Skills'
 const App = () => {
   return (
     <>
+      {/* Skip to main content for accessibility */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <Header />
-      <main role="main">
+      <main id="main-content" role="main">
         <section id="whatIcan" aria-label="Services section"><WhatIcan /></section>
         <section id="featuresproject" aria-label="Featured projects section"><FeaturesProjects /></section>
         <section id="aboutme" aria-label="About me section"><AboutMe /></section>

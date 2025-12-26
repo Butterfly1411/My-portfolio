@@ -54,8 +54,10 @@ const ContactMe = () => {
                 type="text"
                 placeholder="Enter name"
                 required
+                autoComplete="name"
                 className="w-full border border-gray-700 rounded-xl py-4 px-5 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition bg-gray-900"
                 aria-required="true"
+                aria-invalid="false"
               />
             </div>
 
@@ -67,8 +69,10 @@ const ContactMe = () => {
                 type="email"
                 placeholder="Enter email"
                 required
+                autoComplete="email"
                 className="w-full border border-gray-700 rounded-xl py-4 px-5 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition bg-gray-900"
                 aria-required="true"
+                aria-invalid="false"
               />
             </div>
 
@@ -82,6 +86,7 @@ const ContactMe = () => {
                 required
                 className="w-full border border-gray-700 rounded-xl py-4 px-5 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition resize-none bg-gray-900"
                 aria-required="true"
+                aria-invalid="false"
               ></textarea>
             </div>
 

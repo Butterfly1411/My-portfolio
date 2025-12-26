@@ -34,16 +34,16 @@ const WhatIcan = () => {
             </div>
 
             <div>
-                <ul className='grid grid-cols-1 place-items-center   sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20'>
+                <ul className='grid grid-cols-1 place-items-center   sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-20' role="list">
                     {data_li.map(data => (
-                        <li className='lg:w-[350px] h-[300px] w-[320px]  p-5 pt-9 border-2 border-[#5ed5ea] hover:bg-[#5ed5ea] hover:text-black  rounded-[10px]' key={data.id}>
+                        <li className='lg:w-[350px] h-[300px] w-[320px]  p-5 pt-9 border-2 border-[#5ed5ea] hover:bg-[#5ed5ea] hover:text-black  rounded-[10px] focus-within:ring-2 focus-within:ring-[#5ed5ea]' key={data.id} role="listitem">
                             <div className='flex justify-between items-center'>
-                                <i className={`${data.icon} text-3xl`}></i>
-                                <p className='text-6xl text-gray-700'>{data.number}</p>
+                                <i className={`${data.icon} text-3xl`} aria-hidden="true"></i>
+                                <p className='text-6xl text-gray-700' aria-hidden="true">{data.number}</p>
                             </div>
                             <div className='grid gap-2 line'>
-                                <h1 className='text-2xl'>{data.title}</h1>
-                                <span className='w-20 h-0.5 border block line'></span>
+                                <h3 className='text-2xl font-semibold'>{data.title}</h3>
+                                <span className='w-20 h-0.5 border block line' aria-hidden="true"></span>
                                 <p>{data.passage}</p>
                             </div>
                         </li>

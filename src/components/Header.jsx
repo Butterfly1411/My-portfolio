@@ -47,12 +47,17 @@ const Header = () => {
         <header className="relative min-h-screen overflow-hidden border-b rounded-b-[200px]">
 
             {/* Background image */}
-            <div
-                className="absolute inset-0 bg-cover bg-center "
-                style={{ backgroundImage: "url(/code-vibe.jpg)" }}
-                role="img"
-                aria-label="Code background"
-            ></div>
+            <picture className="absolute inset-0">
+              <source srcSet="/code-vibe.jpg" type="image/jpeg" />
+              <img
+                src="/code-vibe.jpg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+                aria-hidden="true"
+              />
+            </picture>
 
             {/* Gradient + light blur only on left side */}
             <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/10 to-transparent backdrop-blur-sm"></div>
@@ -64,18 +69,19 @@ const Header = () => {
                         <h1 className="text-2xl font-medium">Dev<span>/</span></h1>
 
                         {/* Desktop nav */}
-                        <div className="hidden md:flex">
-                            <ul className="flex justify-between gap-[60px] items-center">
+                        <nav className="hidden md:flex" aria-label="Desktop navigation">
+                            <ul className="flex justify-between gap-[60px] items-center" role="list">
                                 {items_li.map(item => (
                                     <li
                                         key={item.id}
                                         className="text-[20px] md:text-[16px] font-medium border-b-2 border-transparent duration-300 hover:border-[#97bfcd] pb-1"
+                                        role="listitem"
                                     >
-                                        <a href={item.id}>{item.title}</a>
+                                        <a href={item.id} className="focus:outline-none focus:ring-2 focus:ring-[#5ed5ea] focus:ring-offset-2 rounded">{item.title}</a>
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </nav>
 
                         {/* Burger */}
                         <button
