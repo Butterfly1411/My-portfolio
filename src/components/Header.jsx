@@ -12,7 +12,7 @@ const Header = () => {
             title: 'Features projects'
         },
         {
-            id: '#aboutMe',
+            id: '#aboutme',
             title: 'About me'
         },
         {
@@ -29,7 +29,7 @@ const Header = () => {
         {
             id: 2,
             icon: 'bi bi-envelope',
-            link: 'malito:sabohattoshpolatova72@gmail.com'
+            link: 'mailto:sabohattoshpolatova72@gmail.com'
         },
         {
             id: 3,
@@ -95,7 +95,7 @@ const Header = () => {
                                         key={item.id}
                                         className="text-[18px] font-medium text-center hover:border-[#97bfcd]"
                                     >
-                                        <a href="">{item.title}</a>
+                                        <a href={item.id}>{item.title}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -116,7 +116,7 @@ const Header = () => {
                     <ul className=" gap-[30px] mt-10 social">
                         {icon_items.map(icon => (
                             <li className="w-[50px] h-[50px]" key={icon.id}>
-                                <a href={icon.link} target="_blank">
+                                <a href={icon.link} target="_blank" rel="noreferrer">
                                     <i className={icon.icon + " text-3xl"}></i>
                                 </a>
                             </li>

@@ -52,8 +52,8 @@ const Footer = () => {
           <ul className="grid gap-3 text-lg">
             <li><a className="hover:text-blue-400 duration-200" href="#home">Home</a></li>
             <li><a className="hover:text-blue-400 duration-200" href="#featuresproject">My projects</a></li>
-            <li><a className="hover:text-blue-400 duration-200" href="#aboutMe">About me</a></li>
-            <li><a className="hover:text-blue-400 duration-200" href="#contactMe">Contact me</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#aboutme">About me</a></li>
+            <li><a className="hover:text-blue-400 duration-200" href="#contactme">Contact me</a></li>
           </ul>
         </div>
   
@@ -66,6 +66,7 @@ const Footer = () => {
                 key={item.id}
                 href={item.link}
                 target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center 
                            rounded-full bg-blue-100 hover:bg-blue-200 
                            duration-200"

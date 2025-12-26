@@ -21,19 +21,19 @@ const ContactMe = () => {
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
                   <i className="bi bi-telephone mt-3  text-black text-2xl"></i>
                 </div>
-                <a href="">+99894-979-84-94</a>
+                <a href="tel:+998949798494">+99894-979-84-94</a>
               </li>
               <li className='flex items-center gap-4'>
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
                   <i className="bi bi-envelope-open mt-3  text-black text-2xl"></i>
                 </div>
-                <a className='md:text-[10px]' href="">sabohattoshpolatova72@gmail.com</a>
+                <a className='md:text-[10px] lg:text-xl' href="mailto:sabohattoshpolatova72@gmail.com">sabohattoshpolatova72@gmail.com</a>
               </li>
               <li className='flex items-center gap-4'>
                 <div className='w-14 h-14 flex justify-center rounded-full bg-blue-200'>
                   <i className="bi bi-geo-alt mt-3  text-black text-2xl"></i>
                 </div>
-                <a href=""> Olmoliq, Toshkent</a>
+                <span> Olmoliq, Toshkent</span>
               </li>
             </ul>
           </div>
