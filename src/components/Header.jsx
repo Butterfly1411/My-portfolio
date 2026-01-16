@@ -48,7 +48,7 @@ const Header = () => {
 
             {/* Background image */}
             <picture className="absolute inset-0">
-              <source srcSet="/code-vibe.jpg" type="image/jpeg" />
+              <source srcSet="/code-vibe.webp" type="image/jpeg" />
               <img
                 src="/code-vibe.jpg"
                 alt=""
@@ -61,7 +61,7 @@ const Header = () => {
             </picture>
 
             {/* Gradient + light blur only on left side */}
-            <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/10 to-transparent backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-black/10 via-black/10 to-transparent"></div>
 
             {/* NAV + CONTENT */}
             <div className="relative z-10 grid  gap-30">

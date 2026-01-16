@@ -48,8 +48,8 @@ const AboutMe = () => {
             </div>
             <img 
               className='lg:w-90 lg:h-90 w-70 h-70 rounded-full lg:ml-10 lg:mt-9 ml-5 mt-5 ' 
-              src='/Sabohat3.png' 
-              alt="Sabohat Toshpolatova - Frontend Developer" 
+              src='' 
+              alt="" 
               loading="eager"
               fetchPriority="high"
               decoding="async"
